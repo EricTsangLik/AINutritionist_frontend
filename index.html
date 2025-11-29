@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 校園營養師 | AI School Nutritionist</title>
+</head>
+<body>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="header-content">
+            <div class="header-left">
+                <h1 class="system-name">AI 校園營養師</h1>
+                <span class="system-name-en">AI School Nutritionist</span>
+            </div>
+            <div class="header-right">
+                <div class="current-date" id="currentDate"></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <div class="hero-icon">🥗</div>
+            <h2 class="hero-title">探索健康蔬菜世界</h2>
+            <p class="hero-description">
+                讓我們一起學習蔬菜的營養知識！
+                <br>
+                <span class="hero-description-en">Let's learn about vegetable nutrition together!</span>
+            </p>
+        </div>
+    </section>
+
+    <!-- System Introduction Section -->
+    <section class="system-intro-section">
+        <div class="intro-container">
+            <h2 class="intro-title">
+                🌟 歡迎來到蔬菜小學堂！
+                <span class="intro-subtitle">Welcome to Vegetable Classroom!</span>
+            </h2>
+            
+            <div class="intro-content">
+                <div class="intro-text">
+                    <p class="intro-paragraph">
+                        小朋友，你知道蔬菜有多厲害嗎？🥬 
+                        每一種蔬菜都像超級英雄一樣，有自己的超能力！
+                        它們能讓你的眼睛更明亮👀、身體更強壯💪、頭腦更聰明🧠！
+                    </p>
+                    <p class="intro-paragraph-en">
+                        Did you know vegetables are like superheroes? 🦸 
+                        Each one has special powers to make you stronger, smarter, and healthier!
+                    </p>
+                </div>
+
+                <div class="intro-features-grid">
+                    <div class="intro-feature-box">
+                    <div class="intro-feature-icon">📷</div>
+                    <h3 class="intro-feature-title">拍照學習</h3>
+                    <p class="intro-feature-desc">用相機拍攝蔬菜，發現蔬菜秘密！</p>
+                    <p class="intro-feature-desc-en">Camera Recognition Fun!</p>
+                    </div>
+
+                    <div class="intro-feature-box">
+                        <div class="intro-feature-icon">🎁</div>
+                        <h3 class="intro-feature-title">有趣的知識</h3>
+                        <p class="intro-feature-desc">學習蔬菜的超能力！</p>
+                        <p class="intro-feature-desc-en">Learn Superpowers!</p>
+                    </div>
+
+                    <div class="intro-feature-box">
+                        <div class="intro-feature-icon">👨‍🍳</div>
+                        <h3 class="intro-feature-title">簡單食譜</h3>
+                        <p class="intro-feature-desc">自己動手做美味料理！</p>
+                        <p class="intro-feature-desc-en">Easy Recipes!</p>
+                    </div>
+
+                    <div class="intro-feature-box">
+                        <div class="intro-feature-icon">⭐</div>
+                        <h3 class="intro-feature-title">變身超人</h3>
+                        <p class="intro-feature-desc">吃蔬菜，變得更健康！</p>
+                        <p class="intro-feature-desc-en">Be a Superhero!</p>
+                    </div>
+                </div>
+
+                <div class="intro-cta">
+                    <p class="intro-cta-text">
+                        🎯 準備好了嗎？選一個你喜歡的蔬菜，開始冒險吧！
+                        <br>
+                        <span>Ready? Pick a veggie and start your adventure!</span>
+                    </p>
+                    <div class="intro-arrow">↓</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Functional Section - Camera Recognition -->
+    <section class="functional-section">
+        <div class="functional-header">
+            <h2 class="section-title">
+                拍照學習蔬菜！
+                <span class="section-subtitle">Take a Photo to Learn!</span>
+            </h2>
+            <p class="section-description">
+                現在拍攝蔬菜的樣子，系統會自動識別並顯示對應的蔬菜資訊！
+                <br>
+                <span>Take a photo of vegetables, and the system will recognize and show the corresponding vegetable!</span>
+            </p>
+            
+            <!-- Letter Guide -->
+            <div class="letter-guide">
+                <div class="letter-item">
+                    <div class="letter-image-container">
+                        <img src="/images/butterhead_lettuce.png" alt="Butterhead Lettuce" class="letter-image">
+                    </div>
+                    <span>牛油生菜<br>Butterhead Lettuce</span>
+                </div>
+                <div class="letter-item">
+                    <div class="letter-image-container">
+                        <img src="/images/bigleaflettuce.png" alt="Big Leaf Lettuce" class="letter-image">
+                    </div>
+                    <span>大葉生菜<br>Big Leaf Lettuce</span>
+                </div>
+                <div class="letter-item">
+                    <div class="letter-image-container">
+                        <img src="/images/kale.png" alt="Kale" class="letter-image">
+        </div>
+                    <span>羽衣甘藍<br>Kale</span>
+                </div>
+                <div class="letter-item">
+                    <div class="letter-image-container">
+                        <img src="/images/RedSorrel.png" alt="Red Sorrel" class="letter-image">
+            </div>
+                    <span>紅酸膜<br>Red Sorrel</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Camera Interface -->
+        <div class="camera-container" id="cameraContainer">
+            <!-- Video Preview -->
+            <div class="video-wrapper" id="videoWrapper" style="display: none;">
+                <video id="cameraVideo" autoplay playsinline></video>
+                <div class="camera-controls">
+                    <button class="camera-button capture-button" id="captureButton">
+                        📸 拍照 Take Photo
+                    </button>
+                    <button class="camera-button stop-button" id="stopCameraButton">
+                        ❌ 關閉 Close
+                    </button>
+                </div>
+            </div>
+
+            <!-- Captured Image Preview -->
+            <div class="captured-preview" id="capturedPreview" style="display: none;">
+                <img id="capturedImage" src="" alt="Captured">
+                <div class="preview-controls">
+                    <button class="camera-button confirm-button" id="confirmButton">
+                        ✓ 確認 Confirm
+                    </button>
+                    <button class="camera-button retake-button" id="retakeButton">
+                        🔄 重拍 Retake
+                    </button>
+                </div>
+            </div>
+
+            <!-- Start Camera Button -->
+            <div class="camera-start" id="cameraStart">
+                <button class="camera-button start-button" id="startCameraButton">
+                    📷 開啟相機<br><span>Start Camera</span>
+                </button>
+        </div>
+
+            <!-- Loading State -->
+            <div class="loading-overlay" id="loadingOverlay" style="display: none;">
+                <div class="loading-spinner"></div>
+                <p>正在識別蔬菜...<br><span>Recognizing vegetables...</span></p>
+            </div>
+
+            <!-- Error Message -->
+            <div class="error-message" id="errorMessage" style="display: none;"></div>
+        </div>
+
+        <!-- Information Display Area -->
+        <div class="info-display" id="infoDisplay" style="display: none;">
+            <button class="close-button" id="closeButton">✕</button>
+            
+            <div class="info-header">
+                <img class="info-image" id="infoImage" src="" alt="Vegetable">
+                <h3 class="info-title" id="infoTitle"></h3>
+            </div>
+
+            <!-- Tabs -->
+            <div class="info-tabs">
+                <button class="tab-button active" data-tab="introduction">
+                    介紹及種植方法 Introduction & Growing
+                </button>
+                <button class="tab-button" data-tab="nutrition">
+                    營養 Nutrition
+                </button>
+                <button class="tab-button" data-tab="funfacts">
+                    趣味小知識 Fun Facts
+                </button>
+                <button class="tab-button" data-tab="recipe">
+                    食譜 Recipe
+                </button>
+            </div>
+
+            <!-- Tab Contents -->
+            <div class="tab-content active" id="introduction">
+                <h4>蔬菜介紹 | Introduction</h4>
+                <div class="content-text" id="introductionText"></div>
+                
+                <h4 class="growing-title">種植方法 | Growing Methods</h4>
+                <div class="growing-methods" id="growingMethods"></div>
+            </div>
+
+            <div class="tab-content" id="nutrition">
+                <h4>主要營養 (每100克) | Main Nutrition (per 100g)</h4>
+                <div class="nutrition-list" id="nutritionList"></div>
+            </div>
+
+            <div class="tab-content" id="funfacts">
+                <h4>趣味小知識 | Fun Facts</h4>
+                <div class="fun-facts-list" id="funFactsList"></div>
+            </div>
+
+            <div class="tab-content" id="recipe">
+                <h4>美味食譜 | Food Recipe</h4>
+                <div class="recipe-content">
+                    <h5 id="recipeName"></h5>
+                    <div class="recipe-section">
+                        <h6>材料 | Ingredients:</h6>
+                        <ul id="recipeIngredients"></ul>
+                    </div>
+                    <div class="recipe-section">
+                        <h6>步驟 | Steps:</h6>
+                        <ol id="recipeSteps"></ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>© 2025 AI 校園營養師 | AI School Nutritionist</p>
+            <p class="footer-tagline">讓學習變得有趣又健康！ | Making learning fun and healthy!</p>
+        </div>
+    </footer>
+
+    <script type="module" src="/src/main.ts"></script>
+</body>
+</html>
+
