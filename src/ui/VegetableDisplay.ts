@@ -1,8 +1,8 @@
-import { vegetablesData } from '../data/vegetables';
-import { VegetableData } from '../types/index';
+import { vegetablesData } from '../data/vegetables.js';
+// import { VegetableData } from '../types/index.js';
 
 export class VegetableDisplay {
-    private currentVegetable: VegetableData | null = null;
+    // private currentVegetable: VegetableData | null = null;
 
     constructor(
         private infoDisplay: HTMLElement,
@@ -16,7 +16,7 @@ export class VegetableDisplay {
         const vegetable = vegetablesData[vegetableId];
         if (!vegetable) return;
 
-        this.currentVegetable = vegetable;
+        // this.currentVegetable = vegetable;
 
         // Update header
         const infoImage = document.getElementById('infoImage') as HTMLImageElement;
@@ -165,10 +165,8 @@ export class VegetableDisplay {
             closeButton.addEventListener('click', () => {
                 this.infoDisplay.style.display = 'none';
                 this.cameraStart.style.display = 'flex';
-                this.currentVegetable = null;
+                // this.currentVegetable = null;
             });
         }
     }
 }
-
-
